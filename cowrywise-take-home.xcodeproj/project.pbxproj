@@ -9,25 +9,61 @@
 /* Begin PBXBuildFile section */
 		7EC114EB2A64631F00F31DB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC114EA2A64631F00F31DB6 /* AppDelegate.swift */; };
 		7EC114ED2A64631F00F31DB6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC114EC2A64631F00F31DB6 /* SceneDelegate.swift */; };
-		7EC114EF2A64631F00F31DB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC114EE2A64631F00F31DB6 /* ViewController.swift */; };
+		7EC114EF2A64631F00F31DB6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC114EE2A64631F00F31DB6 /* HomeViewController.swift */; };
 		7EC114F22A64631F00F31DB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EC114F02A64631F00F31DB6 /* Main.storyboard */; };
 		7EC114F42A64631F00F31DB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EC114F32A64631F00F31DB6 /* Assets.xcassets */; };
 		7EC114F72A64631F00F31DB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EC114F52A64631F00F31DB6 /* LaunchScreen.storyboard */; };
 		7EC115032A64698F00F31DB6 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EC115022A64698F00F31DB6 /* Colors.xcassets */; };
 		7EC115082A6469D500F31DB6 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC115072A6469D500F31DB6 /* Colors.swift */; };
+		7EC1150C2A648BF600F31DB6 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC1150B2A648BF600F31DB6 /* CircleView.swift */; };
+		7EC1150F2A64910000F31DB6 /* CurrencyPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC1150E2A64910000F31DB6 /* CurrencyPickerView.swift */; };
+		7EC115112A64910A00F31DB6 /* CurrencyPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EC115102A64910A00F31DB6 /* CurrencyPickerView.xib */; };
+		7EC1151B2A64BA6000F31DB6 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC1151A2A64BA6000F31DB6 /* APIConstants.swift */; };
+		7EC1151D2A64BBEA00F31DB6 /* Alamofire.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC1151C2A64BBEA00F31DB6 /* Alamofire.xcframework */; };
+		7EC1151E2A64BBEA00F31DB6 /* Alamofire.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC1151C2A64BBEA00F31DB6 /* Alamofire.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7EC115212A64BE5200F31DB6 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC115202A64BE5200F31DB6 /* APIClient.swift */; };
+		7EC115232A64BE5D00F31DB6 /* APIClientImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC115222A64BE5D00F31DB6 /* APIClientImpl.swift */; };
+		7EC115262A64C95500F31DB6 /* CurrencyPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC115252A64C95500F31DB6 /* CurrencyPickerViewController.swift */; };
+		7EC115282A64D98F00F31DB6 /* SwiftyJSON.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC115272A64D98E00F31DB6 /* SwiftyJSON.xcframework */; };
+		7EC115292A64D98F00F31DB6 /* SwiftyJSON.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC115272A64D98E00F31DB6 /* SwiftyJSON.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7EC1151F2A64BBEA00F31DB6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7EC1151E2A64BBEA00F31DB6 /* Alamofire.xcframework in Embed Frameworks */,
+				7EC115292A64D98F00F31DB6 /* SwiftyJSON.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		7EC114E72A64631F00F31DB6 /* cowrywise-take-home.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cowrywise-take-home.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EC114EA2A64631F00F31DB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EC114EC2A64631F00F31DB6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7EC114EE2A64631F00F31DB6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7EC114EE2A64631F00F31DB6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7EC114F12A64631F00F31DB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7EC114F32A64631F00F31DB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "cowrywise-take-home/Assets.xcassets"; sourceTree = SOURCE_ROOT; };
 		7EC114F62A64631F00F31DB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7EC114F82A64631F00F31DB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EC115022A64698F00F31DB6 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		7EC115072A6469D500F31DB6 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		7EC1150B2A648BF600F31DB6 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		7EC1150E2A64910000F31DB6 /* CurrencyPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPickerView.swift; sourceTree = "<group>"; };
+		7EC115102A64910A00F31DB6 /* CurrencyPickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrencyPickerView.xib; sourceTree = "<group>"; };
+		7EC115132A64B96F00F31DB6 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		7EC1151A2A64BA6000F31DB6 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		7EC1151C2A64BBEA00F31DB6 /* Alamofire.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Alamofire.xcframework; path = Carthage/Build/Alamofire.xcframework; sourceTree = "<group>"; };
+		7EC115202A64BE5200F31DB6 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		7EC115222A64BE5D00F31DB6 /* APIClientImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientImpl.swift; sourceTree = "<group>"; };
+		7EC115252A64C95500F31DB6 /* CurrencyPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPickerViewController.swift; sourceTree = "<group>"; };
+		7EC115272A64D98E00F31DB6 /* SwiftyJSON.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SwiftyJSON.xcframework; path = Carthage/Build/SwiftyJSON.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +71,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EC1151D2A64BBEA00F31DB6 /* Alamofire.xcframework in Frameworks */,
+				7EC115282A64D98F00F31DB6 /* SwiftyJSON.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +84,7 @@
 			children = (
 				7EC114E92A64631F00F31DB6 /* cowrywise-take-home */,
 				7EC114E82A64631F00F31DB6 /* Products */,
+				7EC115122A64B96F00F31DB6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,8 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				7EC114FF2A6467B900F31DB6 /* Assets */,
-				7EC115012A6467C500F31DB6 /* View Controllers */,
 				7EC115002A6467BF00F31DB6 /* Data */,
+				7EC115012A6467C500F31DB6 /* View Controllers */,
 				7EC114FE2A6467A600F31DB6 /* Application */,
 				7EC114F82A64631F00F31DB6 /* Info.plist */,
 			);
@@ -93,6 +132,7 @@
 		7EC115002A6467BF00F31DB6 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				7EC115182A64BA3900F31DB6 /* Networking */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -100,7 +140,8 @@
 		7EC115012A6467C500F31DB6 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				7EC114EE2A64631F00F31DB6 /* ViewController.swift */,
+				7EC115242A64C92600F31DB6 /* Currency Picker */,
+				7EC115092A647A2500F31DB6 /* Home */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -113,6 +154,77 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		7EC115092A647A2500F31DB6 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				7EC1150A2A648BC300F31DB6 /* Views */,
+				7EC114EE2A64631F00F31DB6 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		7EC1150A2A648BC300F31DB6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7EC1150D2A6490DD00F31DB6 /* Currency Picker View */,
+				7EC1150B2A648BF600F31DB6 /* CircleView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7EC1150D2A6490DD00F31DB6 /* Currency Picker View */ = {
+			isa = PBXGroup;
+			children = (
+				7EC1150E2A64910000F31DB6 /* CurrencyPickerView.swift */,
+				7EC115102A64910A00F31DB6 /* CurrencyPickerView.xib */,
+			);
+			path = "Currency Picker View";
+			sourceTree = "<group>";
+		};
+		7EC115122A64B96F00F31DB6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7EC115272A64D98E00F31DB6 /* SwiftyJSON.xcframework */,
+				7EC1151C2A64BBEA00F31DB6 /* Alamofire.xcframework */,
+				7EC115132A64B96F00F31DB6 /* Alamofire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7EC115182A64BA3900F31DB6 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				7EC115192A64BA4600F31DB6 /* APIClient */,
+				7EC1152A2A64D9CE00F31DB6 /* APIs */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		7EC115192A64BA4600F31DB6 /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				7EC1151A2A64BA6000F31DB6 /* APIConstants.swift */,
+				7EC115202A64BE5200F31DB6 /* APIClient.swift */,
+				7EC115222A64BE5D00F31DB6 /* APIClientImpl.swift */,
+			);
+			path = APIClient;
+			sourceTree = "<group>";
+		};
+		7EC115242A64C92600F31DB6 /* Currency Picker */ = {
+			isa = PBXGroup;
+			children = (
+				7EC115252A64C95500F31DB6 /* CurrencyPickerViewController.swift */,
+			);
+			path = "Currency Picker";
+			sourceTree = "<group>";
+		};
+		7EC1152A2A64D9CE00F31DB6 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -123,6 +235,8 @@
 				7EC114E32A64631F00F31DB6 /* Sources */,
 				7EC114E42A64631F00F31DB6 /* Frameworks */,
 				7EC114E52A64631F00F31DB6 /* Resources */,
+				7EC115172A64B98C00F31DB6 /* Run Script */,
+				7EC1151F2A64BBEA00F31DB6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -171,6 +285,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EC115112A64910A00F31DB6 /* CurrencyPickerView.xib in Resources */,
 				7EC114F72A64631F00F31DB6 /* LaunchScreen.storyboard in Resources */,
 				7EC115032A64698F00F31DB6 /* Colors.xcassets in Resources */,
 				7EC114F42A64631F00F31DB6 /* Assets.xcassets in Resources */,
@@ -180,12 +295,42 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7EC115172A64B98C00F31DB6 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/SwiftyJSON.framework",
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nCARTHAGEP=\"$(which carthage) copy-frameworks\"\n$CARTHAGE\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7EC114E32A64631F00F31DB6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EC114EF2A64631F00F31DB6 /* ViewController.swift in Sources */,
+				7EC115232A64BE5D00F31DB6 /* APIClientImpl.swift in Sources */,
+				7EC114EF2A64631F00F31DB6 /* HomeViewController.swift in Sources */,
+				7EC1151B2A64BA6000F31DB6 /* APIConstants.swift in Sources */,
+				7EC115262A64C95500F31DB6 /* CurrencyPickerViewController.swift in Sources */,
+				7EC1150F2A64910000F31DB6 /* CurrencyPickerView.swift in Sources */,
+				7EC115212A64BE5200F31DB6 /* APIClient.swift in Sources */,
+				7EC1150C2A648BF600F31DB6 /* CircleView.swift in Sources */,
 				7EC115082A6469D500F31DB6 /* Colors.swift in Sources */,
 				7EC114EB2A64631F00F31DB6 /* AppDelegate.swift in Sources */,
 				7EC114ED2A64631F00F31DB6 /* SceneDelegate.swift in Sources */,

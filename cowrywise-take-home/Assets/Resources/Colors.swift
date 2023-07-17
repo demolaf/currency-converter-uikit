@@ -6,3 +6,9 @@
 //
 
 import Foundation
+import UIKit
+
+enum Colors {
+    static let primary = UIColor(named: "primary")!
+    static let secondary = UIColor(named: "secondary")!
+}
