@@ -26,9 +26,4 @@ import SwiftyJSON
 struct CurrencySymbolsListDTO: Decodable {
     let success: Bool
     let symbols: [String: String]
-    
-    init(json: JSON) {
-        self.success = json["success"].boolValue
-        self.symbols = json["symbols"].dictionaryObject as! [String: String]
-    }
 }

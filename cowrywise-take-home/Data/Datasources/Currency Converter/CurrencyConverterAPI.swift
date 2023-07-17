@@ -23,26 +23,27 @@ class CurrencyConverterAPI {
             if let response = response {
                 completion(response, nil)
             } else {
-                debugPrint(error)
                 completion(nil, error)
             }
         }
     }
     
     func convertToCurrency(from: String, to: String, amount: Double, completion: @escaping (Double?, Error?) -> Void) {
+        let user = APIConstants.Auth.xeAccountID
+        let password = APIConstants.Auth.xeAPIKey
+        
         var params = Parameters()
-        params.updateValue(APIConstants.Auth.fixerAPIKey, forKey: APIConstants.Auth.fixerAPIKeyQuery)
+        
         params.updateValue(from, forKey: "from")
         params.updateValue(to, forKey: "to")
         params.updateValue(amount, forKey: "amount")
         
-        apiClient.get(url: APIConstants.Endpoints.getCurrencySymbolsList.url, headers: nil, parameters: params, response: CurrencyConversionDTO.self, interceptor: nil) { response, error in
+        apiClient.get(url: APIConstants.Endpoints.convertCurrencyXE.url, headers: nil, parameters: params, response: CurrencyConversionDTO.self, interceptor: nil) { response, error in
             if let response = response {
-                completion(response.result, nil)
+                completion(response.to.first?.mid, nil)
             } else {
-                debugPrint(error)
                 completion(nil, error)
             }
-        }
+        }?.authenticate(username: user, password: password)
     }
 }

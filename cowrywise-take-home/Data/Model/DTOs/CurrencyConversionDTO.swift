@@ -9,12 +9,16 @@ import Foundation
 import SwiftyJSON
 
 // MARK: - CurrencyConversionDTO
-struct CurrencyConversionDTO: Codable {
-    let success: Bool
-    let result: Double
+struct CurrencyConversionDTO: Decodable {
+    let to: [To]
     
     init(json: JSON) {
-        self.success = json["success"].boolValue
-        self.result = json["result"].doubleValue
+        self.to = json["to"].arrayObject as! [To]
     }
+}
+
+// MARK: - To
+struct To: Decodable {
+    let quotecurrency: String
+    let mid: Double
 }

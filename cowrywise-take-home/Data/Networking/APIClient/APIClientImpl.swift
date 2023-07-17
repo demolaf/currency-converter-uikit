@@ -19,8 +19,10 @@ class APIClientImpl: APIClient {
         let request = AF.request(url, parameters: parameters, headers: headers, interceptor: interceptor).responseDecodable(of: ResponseType.self) { response in
             switch response.result {
             case .success(let responseObject):
+                debugPrint(responseObject)
                 completion(responseObject, nil)
             case .failure(let error):
+                debugPrint(error)
                 completion(nil, error)
             }
         }

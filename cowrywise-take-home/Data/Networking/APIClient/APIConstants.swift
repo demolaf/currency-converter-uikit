@@ -13,23 +13,32 @@ class APIConstants {
     struct Auth {
         static let fixerAPIKeyQuery = "access_key"
         static let fixerAPIKey = "5f7125e773d2377386966de18a4a359b"
+        static let xeAPIKeyQuery = "api_key"
+        static let xeAccountID = "na309460343"
+        static let xeAPIKey = "bbdur0otvqjiglgh03ml1gjsh3"
     }
     
     enum Endpoints {
-        static let urlScheme = "http://"
+        static let httpUrlScheme = "http://"
+        static let httpsUrlScheme = "https://"
         static let fixerAPIHost = "data.fixer.io/api"
-        static let fixerBaseURL = "\(urlScheme)\(fixerAPIHost)"
-        //static let fixerAPIKeyValue = ["access_key": Auth.fixerAPIKey]
+        static let xeAPIHost = "xecdapi.xe.com/v1"
+        
+        static let fixerBaseURL = "\(httpUrlScheme)\(fixerAPIHost)"
+        static let xeBaseURL = "\(httpsUrlScheme)\(xeAPIHost)"
         
         case getCurrencySymbolsList
-        case convertCurrency(String, String, Double)
+        case convertCurrency
+        case convertCurrencyXE
         
         var stringValue: String {
             switch self {
             case .getCurrencySymbolsList:
                 return "\(Endpoints.fixerBaseURL)/symbols"
-            case let .convertCurrency(from, to, amount):
-                return "\(Endpoints.fixerBaseURL)/convert?from=\(from)&to=\(to)&amount=\(amount)"
+            case .convertCurrency:
+                return "\(Endpoints.fixerBaseURL)/convert"
+            case .convertCurrencyXE:
+                return "\(Endpoints.xeBaseURL)/convert_from"
             }
         }
         

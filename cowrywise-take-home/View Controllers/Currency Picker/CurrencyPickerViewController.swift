@@ -58,7 +58,9 @@ class CurrencyPickerViewController: UIViewController {
             if let selectedCurrencySymbol = self.selectedCurrencySymbol {
                 self.dismissCompletionHandler(selectedCurrencySymbol)
             } else {
-                self.dismissCompletionHandler(self.fetchSymbolsList.first!)
+                if let firstSymbol = self.fetchSymbolsList.first {
+                    self.dismissCompletionHandler(firstSymbol)
+                }
             }
         }
     }

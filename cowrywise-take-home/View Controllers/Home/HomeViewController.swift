@@ -23,10 +23,11 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var rightCurrencyPickerLabel: UILabel!
     @IBOutlet weak var chartView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var convertButton: UIButton!
     
     var currencyConverterRepository: CurrencyConverterRepository!
-    var selectedCurrencyLeftCurrencyPicker: Symbols!
-    var selectedCurrencyRightCurrencyPicker: Symbols!
+    var selectedCurrencyLeftCurrencyPicker = Symbols(name: "", abbreviation: "EUR")
+    var selectedCurrencyRightCurrencyPicker = Symbols(name: "", abbreviation: "USD")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,17 +49,17 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func convertPressed(_ sender: UIButton?) {
-        guard let amount = firstCurrencyTF.text else {
+        convertButton.configuration?.showsActivityIndicator = true
+        guard let amount = firstCurrencyTF.text, !(firstCurrencyTF.text?.isEmpty ?? false) else {
+            self.convertButton.configuration?.showsActivityIndicator = false
+            self.showUIAlertView(title: "Error!", message: "Please input a value to be converted")
             return
         }
+        
         currencyConverterRepository.convertToCurrency(from: selectedCurrencyLeftCurrencyPicker.abbreviation, to: selectedCurrencyRightCurrencyPicker.abbreviation, amount: Double(amount) ?? 0) { conversionResult in
             
-            let prefix = UILabel()
-            prefix.text = String(conversionResult!)
-            prefix.sizeToFit()
-            prefix.textColor = .black
-            
-            self.secondCurrencyTF.leftView = prefix
+            self.secondCurrencyTF.text = String(conversionResult ?? 0)
+            self.convertButton.configuration?.showsActivityIndicator = false
         }
     }
     
@@ -89,6 +90,7 @@ extension HomeViewController {
         setupCurrencyPickers()
         setHeaderTextAttributes()
         setupTF()
+        setupTFAppearance()
         setupChartView()
         setupScrollView()
     }
@@ -103,17 +105,8 @@ extension HomeViewController {
     }
     
     private func setupCurrencyPickers() {
-        if let selectedCurrencyLeftCurrencyPicker = selectedCurrencyLeftCurrencyPicker {
-            leftCurrencyPickerLabel.text = selectedCurrencyLeftCurrencyPicker.abbreviation
-        } else {
-            leftCurrencyPickerLabel.text = "EUR"
-        }
-        
-        if let selectedCurrencyRightCurrencyPicker = selectedCurrencyRightCurrencyPicker {
-            rightCurrencyPickerLabel.text = selectedCurrencyRightCurrencyPicker.abbreviation
-        } else {
-            rightCurrencyPickerLabel.text = "USD"
-        }
+        leftCurrencyPickerLabel.text = selectedCurrencyLeftCurrencyPicker.abbreviation
+        rightCurrencyPickerLabel.text = selectedCurrencyRightCurrencyPicker.abbreviation
         
         leftCurrencyPickerView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(leftCurrencyPickerTapped)))
         rightCurrencyPickerView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(rightCurrencyPickerTapped)))
@@ -133,14 +126,12 @@ extension HomeViewController {
         
         firstCurrencyTF.layer.borderWidth = 0
         secondCurrencyTF.layer.borderColor = UIColor.clear.cgColor
-        
-        setupTFAppearance()
     }
     
     private func setupTFAppearance() {
         //
         let firstCurrencyTFSuffix = UILabel()
-        firstCurrencyTFSuffix.text = selectedCurrencyLeftCurrencyPicker?.abbreviation ?? "EUR"
+        firstCurrencyTFSuffix.text = selectedCurrencyLeftCurrencyPicker.abbreviation
         firstCurrencyTFSuffix.text?.append("    ")
         firstCurrencyTFSuffix.sizeToFit()
         firstCurrencyTFSuffix.textColor = .lightGray
@@ -150,7 +141,7 @@ extension HomeViewController {
         
         //
         let secondCurrencyTFSuffix = UILabel()
-        secondCurrencyTFSuffix.text = selectedCurrencyRightCurrencyPicker?.abbreviation ?? "USD"
+        secondCurrencyTFSuffix.text = selectedCurrencyRightCurrencyPicker.abbreviation
         secondCurrencyTFSuffix.text?.append("    ")
         secondCurrencyTFSuffix.sizeToFit()
         secondCurrencyTFSuffix.textColor = .lightGray
