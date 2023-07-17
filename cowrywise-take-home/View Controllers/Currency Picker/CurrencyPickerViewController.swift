@@ -50,7 +50,6 @@ class CurrencyPickerViewController: UIViewController {
             self.loadingActivity.stopAnimating()
             self.pickerView.isHidden = false
             self.pickerView.reloadAllComponents()
-            debugPrint(self.fetchSymbolsList)
         }
     }
     

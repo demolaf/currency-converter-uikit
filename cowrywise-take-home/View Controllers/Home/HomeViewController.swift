@@ -17,8 +17,10 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var firstCurrencyTF: UITextField!
     @IBOutlet weak var secondCurrencyTF: UITextField!
-    @IBOutlet weak var leftCurrencyPicker: CurrencyPickerView!
-    @IBOutlet weak var rightCurrencyPicker: CurrencyPickerView!
+    @IBOutlet weak var leftCurrencyPickerView: UIView!
+    @IBOutlet weak var rightCurrencyPickerView: UIView!
+    @IBOutlet weak var leftCurrencyPickerLabel: UILabel!
+    @IBOutlet weak var rightCurrencyPickerLabel: UILabel!
     @IBOutlet weak var chartView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     
@@ -46,7 +48,10 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func convertPressed(_ sender: UIButton?) {
-        currencyConverterRepository.convertToCurrency(from: selectedCurrencyLeftCurrencyPicker.abbreviation, to: selectedCurrencyRightCurrencyPicker.abbreviation, amount: Double(firstCurrencyTF.text!)!) { conversionResult in
+        guard let amount = firstCurrencyTF.text else {
+            return
+        }
+        currencyConverterRepository.convertToCurrency(from: selectedCurrencyLeftCurrencyPicker.abbreviation, to: selectedCurrencyRightCurrencyPicker.abbreviation, amount: Double(amount) ?? 0) { conversionResult in
             
             let prefix = UILabel()
             prefix.text = String(conversionResult!)
@@ -99,19 +104,27 @@ extension HomeViewController {
     
     private func setupCurrencyPickers() {
         if let selectedCurrencyLeftCurrencyPicker = selectedCurrencyLeftCurrencyPicker {
-            leftCurrencyPicker.labelView.text = selectedCurrencyLeftCurrencyPicker.abbreviation
+            leftCurrencyPickerLabel.text = selectedCurrencyLeftCurrencyPicker.abbreviation
         } else {
-            leftCurrencyPicker.labelView.text = "EUR"
+            leftCurrencyPickerLabel.text = "EUR"
         }
         
         if let selectedCurrencyRightCurrencyPicker = selectedCurrencyRightCurrencyPicker {
-            rightCurrencyPicker.labelView.text = selectedCurrencyRightCurrencyPicker.abbreviation
+            rightCurrencyPickerLabel.text = selectedCurrencyRightCurrencyPicker.abbreviation
         } else {
-            rightCurrencyPicker.labelView.text = "USD"
+            rightCurrencyPickerLabel.text = "USD"
         }
         
-        leftCurrencyPicker.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(leftCurrencyPickerTapped)))
-        rightCurrencyPicker.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(rightCurrencyPickerTapped)))
+        leftCurrencyPickerView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(leftCurrencyPickerTapped)))
+        rightCurrencyPickerView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(rightCurrencyPickerTapped)))
+        
+        leftCurrencyPickerView.layer.cornerRadius = 4
+        leftCurrencyPickerView.layer.borderColor = UIColor.gray.cgColor
+        leftCurrencyPickerView.layer.borderWidth = 0.5
+        
+        rightCurrencyPickerView.layer.cornerRadius = 4
+        rightCurrencyPickerView.layer.borderColor = UIColor.gray.cgColor
+        rightCurrencyPickerView.layer.borderWidth = 0.5
     }
     
     private func setupTF() {
@@ -128,6 +141,7 @@ extension HomeViewController {
         //
         let firstCurrencyTFSuffix = UILabel()
         firstCurrencyTFSuffix.text = selectedCurrencyLeftCurrencyPicker?.abbreviation ?? "EUR"
+        firstCurrencyTFSuffix.text?.append("    ")
         firstCurrencyTFSuffix.sizeToFit()
         firstCurrencyTFSuffix.textColor = .lightGray
         
@@ -137,6 +151,7 @@ extension HomeViewController {
         //
         let secondCurrencyTFSuffix = UILabel()
         secondCurrencyTFSuffix.text = selectedCurrencyRightCurrencyPicker?.abbreviation ?? "USD"
+        secondCurrencyTFSuffix.text?.append("    ")
         secondCurrencyTFSuffix.sizeToFit()
         secondCurrencyTFSuffix.textColor = .lightGray
         

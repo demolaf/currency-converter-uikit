@@ -23,6 +23,7 @@ class CurrencyConverterAPI {
             if let response = response {
                 completion(response, nil)
             } else {
+                debugPrint(error)
                 completion(nil, error)
             }
         }
@@ -39,6 +40,7 @@ class CurrencyConverterAPI {
             if let response = response {
                 completion(response.result, nil)
             } else {
+                debugPrint(error)
                 completion(nil, error)
             }
         }

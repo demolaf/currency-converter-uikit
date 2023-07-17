@@ -20,12 +20,14 @@ class CurrencyConverterRepositoryImpl: CurrencyConverterRepository {
             response?.symbols.forEach({ (key: String, value: String) in
                 currencySymbols.append(Symbols(name: value, abbreviation: key))
             })
+            debugPrint(currencySymbols)
             completion(currencySymbols)
         }
     }
     
     func convertToCurrency(from: String, to: String, amount: Double, completion: @escaping (Double?) -> Void) {
         currencyConverterAPI.convertToCurrency(from: from, to: to, amount: amount) { conversionResult, error in
+            debugPrint(conversionResult)
             completion(conversionResult)
         }
     }
