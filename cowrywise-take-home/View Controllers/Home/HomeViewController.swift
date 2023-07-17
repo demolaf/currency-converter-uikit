@@ -7,6 +7,11 @@
 
 import UIKit
 
+enum CurrencyPickers {
+    case left
+    case right
+}
+
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var headerLabel: UILabel!
@@ -14,23 +19,62 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var secondCurrencyTF: UITextField!
     @IBOutlet weak var leftCurrencyPicker: CurrencyPickerView!
     @IBOutlet weak var rightCurrencyPicker: CurrencyPickerView!
-
+    @IBOutlet weak var chartView: UIView!
+    @IBOutlet weak var scrollView: UIScrollView!
+    
+    var currencyConverterRepository: CurrencyConverterRepository!
+    var selectedCurrencyLeftCurrencyPicker: Symbols!
+    var selectedCurrencyRightCurrencyPicker: Symbols!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        currencyConverterRepository = (UIApplication.shared.delegate as! AppDelegate).repositoryProvider.currencyConverterRepository
         
         setup()
     }
     
     @objc func leftCurrencyPickerTapped() {
         debugPrint("Left currency picker tapped.")
-        let currencyPickerVC = storyboard?.instantiateViewController(withIdentifier: "CurrencyPickerViewController") as! CurrencyPickerViewController
-        present(currencyPickerVC, animated: true)
+        showCurrencyPicker(currencyPicker: .left)
     }
     
     @objc func rightCurrencyPickerTapped() {
         debugPrint("Right currency picker tapped.")
+        showCurrencyPicker(currencyPicker: .right)
+    }
+    
+    @IBAction func convertPressed(_ sender: UIButton?) {
+        currencyConverterRepository.convertToCurrency(from: selectedCurrencyLeftCurrencyPicker.abbreviation, to: selectedCurrencyRightCurrencyPicker.abbreviation, amount: Double(firstCurrencyTF.text!)!) { conversionResult in
+            
+            let prefix = UILabel()
+            prefix.text = String(conversionResult!)
+            prefix.sizeToFit()
+            prefix.textColor = .black
+            
+            self.secondCurrencyTF.leftView = prefix
+        }
+    }
+    
+    private func showCurrencyPicker(currencyPicker: CurrencyPickers) {
         let currencyPickerVC = storyboard?.instantiateViewController(withIdentifier: "CurrencyPickerViewController") as! CurrencyPickerViewController
+        
+        currencyPickerVC.currencyConverterRepository = currencyConverterRepository
+        currencyPickerVC.dismissCompletionHandler = { selectedSymbol in
+            switch currencyPicker {
+            case .left:
+                self.selectedCurrencyLeftCurrencyPicker = selectedSymbol
+                debugPrint("Got here \(selectedSymbol)")
+            case .right:
+                self.selectedCurrencyRightCurrencyPicker = selectedSymbol
+                debugPrint("Got here \(selectedSymbol)")
+            }
+            
+            self.setupCurrencyPickers()
+            self.setupTFAppearance()
+        }
+        
         present(currencyPickerVC, animated: true)
     }
 }
@@ -40,14 +84,31 @@ extension HomeViewController {
         setupCurrencyPickers()
         setHeaderTextAttributes()
         setupTF()
+        setupChartView()
+        setupScrollView()
+    }
+    
+    private func setupScrollView() {
+        scrollView.contentInsetAdjustmentBehavior = .never
+    }
+    
+    private func setupChartView() {
+        chartView.layer.cornerRadius = 30
+        chartView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
     }
     
     private func setupCurrencyPickers() {
-        leftCurrencyPicker.imageView.image = .add
-        leftCurrencyPicker.labelView.text = "EUR"
+        if let selectedCurrencyLeftCurrencyPicker = selectedCurrencyLeftCurrencyPicker {
+            leftCurrencyPicker.labelView.text = selectedCurrencyLeftCurrencyPicker.abbreviation
+        } else {
+            leftCurrencyPicker.labelView.text = "EUR"
+        }
         
-        rightCurrencyPicker.imageView.image = .add
-        rightCurrencyPicker.labelView.text = "PLN"
+        if let selectedCurrencyRightCurrencyPicker = selectedCurrencyRightCurrencyPicker {
+            rightCurrencyPicker.labelView.text = selectedCurrencyRightCurrencyPicker.abbreviation
+        } else {
+            rightCurrencyPicker.labelView.text = "USD"
+        }
         
         leftCurrencyPicker.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(leftCurrencyPickerTapped)))
         rightCurrencyPicker.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(rightCurrencyPickerTapped)))
@@ -60,19 +121,22 @@ extension HomeViewController {
         firstCurrencyTF.layer.borderWidth = 0
         secondCurrencyTF.layer.borderColor = UIColor.clear.cgColor
         
+        setupTFAppearance()
+    }
+    
+    private func setupTFAppearance() {
         //
         let firstCurrencyTFSuffix = UILabel()
-        firstCurrencyTFSuffix.text = "EUR"
+        firstCurrencyTFSuffix.text = selectedCurrencyLeftCurrencyPicker?.abbreviation ?? "EUR"
         firstCurrencyTFSuffix.sizeToFit()
         firstCurrencyTFSuffix.textColor = .lightGray
-        firstCurrencyTFSuffix.translatesAutoresizingMaskIntoConstraints = false
         
         firstCurrencyTF.rightView = firstCurrencyTFSuffix
         firstCurrencyTF.rightViewMode = .always
         
         //
         let secondCurrencyTFSuffix = UILabel()
-        secondCurrencyTFSuffix.text = "PLN"
+        secondCurrencyTFSuffix.text = selectedCurrencyRightCurrencyPicker?.abbreviation ?? "USD"
         secondCurrencyTFSuffix.sizeToFit()
         secondCurrencyTFSuffix.textColor = .lightGray
         
@@ -82,7 +146,7 @@ extension HomeViewController {
     
     private func setHeaderTextAttributes() {
         let title = "Currency\nConverter."
-
+        
         let dot = "."
         
         let titleRange = title.range(of: title)!
@@ -101,6 +165,9 @@ extension HomeViewController {
 }
 
 extension HomeViewController: UITextFieldDelegate {
-    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }
 

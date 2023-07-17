@@ -9,7 +9,6 @@ import UIKit
 
 class CurrencyPickerView: UIView {
     @IBOutlet weak var view: UIView!
-    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var labelView: UILabel!
     @IBOutlet weak var dropdown: UIImageView!
     

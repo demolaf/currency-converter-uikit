@@ -11,5 +11,5 @@ import Alamofire
 protocol APIClient {
     /// GET Method
     @discardableResult
-    func get<ResponseType: Decodable>(url: URL?, headers: HTTPHeaders?, response: ResponseType.Type, interceptor: RequestInterceptor?, completion: @escaping (ResponseType?, Error?) -> Void) -> DataRequest?
+    func get<ResponseType: Decodable>(url: URL?, headers: HTTPHeaders?, parameters: Parameters?, response: ResponseType.Type, interceptor: RequestInterceptor?, completion: @escaping (ResponseType?, Error?) -> Void) -> DataRequest?
 }

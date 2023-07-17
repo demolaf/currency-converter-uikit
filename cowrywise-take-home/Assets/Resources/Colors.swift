@@ -11,4 +11,5 @@ import UIKit
 enum Colors {
     static let primary = UIColor(named: "primary")!
     static let secondary = UIColor(named: "secondary")!
+    static let chartTopGradient = UIColor(named: "chart-top-gradient")!
 }

@@ -11,12 +11,12 @@ import SwiftyJSON
 
 class APIClientImpl: APIClient {
     
-    func get<ResponseType: Decodable>(url: URL?, headers: HTTPHeaders?, response: ResponseType.Type, interceptor: RequestInterceptor?, completion: @escaping (ResponseType?, Error?) -> Void) -> DataRequest? {
+    func get<ResponseType: Decodable>(url: URL?, headers: HTTPHeaders?, parameters: Parameters?, response: ResponseType.Type, interceptor: RequestInterceptor?, completion: @escaping (ResponseType?, Error?) -> Void) -> DataRequest? {
         guard let url = url else {
             return nil
         }
         
-        let request = AF.request(url, headers: headers, interceptor: interceptor).responseDecodable(of: ResponseType.self) { response in
+        let request = AF.request(url, parameters: parameters, headers: headers, interceptor: interceptor).responseDecodable(of: ResponseType.self) { response in
             switch response.result {
             case .success(let responseObject):
                 completion(responseObject, nil)
@@ -24,6 +24,7 @@ class APIClientImpl: APIClient {
                 completion(nil, error)
             }
         }
+        
         request.resume()
         return request
     }

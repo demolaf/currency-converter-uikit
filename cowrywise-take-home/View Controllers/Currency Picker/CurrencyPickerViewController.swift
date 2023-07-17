@@ -11,6 +11,12 @@ class CurrencyPickerViewController: UIViewController {
     
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var pickerViewContainer: UIView!
+    @IBOutlet weak var loadingActivity: UIActivityIndicatorView!
+    
+    var selectedCurrencySymbol: Symbols!
+    var fetchSymbolsList = [Symbols]()
+    var currencyConverterRepository: CurrencyConverterRepository!
+    var dismissCompletionHandler: ((Symbols) -> Void)!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +34,35 @@ class CurrencyPickerViewController: UIViewController {
         pickerView.delegate = self
         pickerView.dataSource = self
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        fetchCurrencySymbols()
+    }
+    
+    func fetchCurrencySymbols() {
+        self.loadingActivity.startAnimating()
+        self.pickerView.isHidden = true
+        currencyConverterRepository.getCurrencySymbols { symbols in
+            self.fetchSymbolsList = symbols
+            
+            self.loadingActivity.stopAnimating()
+            self.pickerView.isHidden = false
+            self.pickerView.reloadAllComponents()
+            debugPrint(self.fetchSymbolsList)
+        }
+    }
+    
+    override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
+        super.dismiss(animated: flag) {
+            if let selectedCurrencySymbol = self.selectedCurrencySymbol {
+                self.dismissCompletionHandler(selectedCurrencySymbol)
+            } else {
+                self.dismissCompletionHandler(self.fetchSymbolsList.first!)
+            }
+        }
+    }
 }
 
 extension CurrencyPickerViewController: UIPickerViewDelegate, UIPickerViewDataSource {
@@ -36,6 +71,14 @@ extension CurrencyPickerViewController: UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 1
+        return fetchSymbolsList.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return "\(fetchSymbolsList[row].abbreviation) - \(fetchSymbolsList[row].name)"
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.selectedCurrencySymbol = fetchSymbolsList[row]
     }
 }
