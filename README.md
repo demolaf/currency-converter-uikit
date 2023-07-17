@@ -10,5 +10,8 @@
 ## Preview
 
 ## Screenshots
+<img src="ReadMeAssets/view1.png"/>
+<img src="ReadMeAssets/view2.png"/>
+<img src="ReadMeAssets/view3.png"/>
 
 ## Installation
