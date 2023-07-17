@@ -361,7 +361,6 @@
                     <navigationItem key="navigationItem" id="Wzv-XJ-4uE"/>
                     <connections>
                         <outlet property="chartView" destination="ygm-8W-tAl" id="cP1-VJ-ZaY"/>
-                        <outlet property="convertButton" destination="n7g-Py-VdS" id="xNy-eO-dc7"/>
                         <outlet property="firstCurrencyTF" destination="f45-Bb-e2R" id="X1p-Xl-PLc"/>
                         <outlet property="headerLabel" destination="c7B-h2-rMM" id="D5p-f8-AT7"/>
                         <outlet property="leftCurrencyPickerLabel" destination="nEj-29-h5g" id="0gL-Ou-w2O"/>
