@@ -12,6 +12,9 @@
 		7E003C4D2A65B51F002E9331 /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E003C4C2A65B51F002E9331 /* Symbols.swift */; };
 		7E003C4F2A65B52C002E9331 /* CurrencyConversionDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E003C4E2A65B52C002E9331 /* CurrencyConversionDTO.swift */; };
 		7E003C522A65F2B4002E9331 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E003C512A65F2B4002E9331 /* UIViewController+Alert.swift */; };
+		7E003C572A65F728002E9331 /* Simulator Screenshot - iPhone 14 Pro Max - 2023-07-17 at 23.23.51.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E003C542A65F727002E9331 /* Simulator Screenshot - iPhone 14 Pro Max - 2023-07-17 at 23.23.51.png */; };
+		7E003C582A65F728002E9331 /* Simulator Screenshot - iPhone 14 Pro Max - 2023-07-17 at 23.22.58.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E003C552A65F727002E9331 /* Simulator Screenshot - iPhone 14 Pro Max - 2023-07-17 at 23.22.58.png */; };
+		7E003C592A65F728002E9331 /* Simulator Screenshot - iPhone 14 Pro Max - 2023-07-17 at 23.22.40.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E003C562A65F728002E9331 /* Simulator Screenshot - iPhone 14 Pro Max - 2023-07-17 at 23.22.40.png */; };
 		7E2AA8A32A6543E6005F3D40 /* SwiftyJSON.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC115272A64D98E00F31DB6 /* SwiftyJSON.xcframework */; };
 		7E2AA8A42A6543E6005F3D40 /* SwiftyJSON.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC115272A64D98E00F31DB6 /* SwiftyJSON.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7E2AA8A62A6543EE005F3D40 /* Realm.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E2AA8A52A6543EE005F3D40 /* Realm.xcframework */; };
@@ -65,6 +68,9 @@
 		7E003C4C2A65B51F002E9331 /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
 		7E003C4E2A65B52C002E9331 /* CurrencyConversionDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConversionDTO.swift; sourceTree = "<group>"; };
 		7E003C512A65F2B4002E9331 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		7E003C542A65F727002E9331 /* Simulator Screenshot - iPhone 14 Pro Max - 2023-07-17 at 23.23.51.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screenshot - iPhone 14 Pro Max - 2023-07-17 at 23.23.51.png"; sourceTree = "<group>"; };
+		7E003C552A65F727002E9331 /* Simulator Screenshot - iPhone 14 Pro Max - 2023-07-17 at 23.22.58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screenshot - iPhone 14 Pro Max - 2023-07-17 at 23.22.58.png"; sourceTree = "<group>"; };
+		7E003C562A65F728002E9331 /* Simulator Screenshot - iPhone 14 Pro Max - 2023-07-17 at 23.22.40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screenshot - iPhone 14 Pro Max - 2023-07-17 at 23.22.40.png"; sourceTree = "<group>"; };
 		7E2AA8A52A6543EE005F3D40 /* Realm.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Realm.xcframework; path = Carthage/Build/Realm.xcframework; sourceTree = "<group>"; };
 		7E2AA8A82A6543F3005F3D40 /* RealmSwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RealmSwift.xcframework; path = Carthage/Build/RealmSwift.xcframework; sourceTree = "<group>"; };
 		7E2AA8AC2A6549A5005F3D40 /* CurrencyConverterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverterRepository.swift; sourceTree = "<group>"; };
@@ -124,6 +130,16 @@
 				7E003C512A65F2B4002E9331 /* UIViewController+Alert.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7E003C532A65F70B002E9331 /* ReadMeAssets */ = {
+			isa = PBXGroup;
+			children = (
+				7E003C562A65F728002E9331 /* Simulator Screenshot - iPhone 14 Pro Max - 2023-07-17 at 23.22.40.png */,
+				7E003C552A65F727002E9331 /* Simulator Screenshot - iPhone 14 Pro Max - 2023-07-17 at 23.22.58.png */,
+				7E003C542A65F727002E9331 /* Simulator Screenshot - iPhone 14 Pro Max - 2023-07-17 at 23.23.51.png */,
+			);
+			path = ReadMeAssets;
 			sourceTree = "<group>";
 		};
 		7E2AA8A22A6541FF005F3D40 /* Repositories */ = {
@@ -197,6 +213,7 @@
 		7EC114E92A64631F00F31DB6 /* cowrywise-take-home */ = {
 			isa = PBXGroup;
 			children = (
+				7E003C532A65F70B002E9331 /* ReadMeAssets */,
 				7EC114FF2A6467B900F31DB6 /* Assets */,
 				7EC115002A6467BF00F31DB6 /* Data */,
 				7EC115012A6467C500F31DB6 /* View Controllers */,
@@ -407,9 +424,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E003C572A65F728002E9331 /* Simulator Screenshot - iPhone 14 Pro Max - 2023-07-17 at 23.23.51.png in Resources */,
 				7EC114F72A64631F00F31DB6 /* LaunchScreen.storyboard in Resources */,
 				7EC115032A64698F00F31DB6 /* Colors.xcassets in Resources */,
+				7E003C582A65F728002E9331 /* Simulator Screenshot - iPhone 14 Pro Max - 2023-07-17 at 23.22.58.png in Resources */,
 				7EC114F42A64631F00F31DB6 /* Assets.xcassets in Resources */,
+				7E003C592A65F728002E9331 /* Simulator Screenshot - iPhone 14 Pro Max - 2023-07-17 at 23.22.40.png in Resources */,
 				7EC114F22A64631F00F31DB6 /* Main.storyboard in Resources */,
 				7E003C4A2A65AFF6002E9331 /* CurrencyPickerView.xib in Resources */,
 			);
