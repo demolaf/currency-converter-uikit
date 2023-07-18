@@ -25,6 +25,11 @@ import RealmSwift
 
 // MARK: - CurrencySymbolsListDTO
 class CurrencySymbolsListDTO: Object, Decodable {
+    @Persisted(primaryKey: true) var _id: ObjectId?
     @Persisted var success: Bool
     @Persisted var symbols: Map<String, String>
+    
+    private enum CodingKeys: String, CodingKey {
+        case success, symbols
+    }
 }

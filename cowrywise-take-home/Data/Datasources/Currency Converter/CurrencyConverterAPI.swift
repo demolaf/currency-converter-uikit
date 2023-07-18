@@ -23,9 +23,19 @@ class CurrencyConverterAPI {
         
         apiClient.get(url: APIConstants.Endpoints.getCurrencySymbolsList.url, headers: nil, parameters: params, response: CurrencySymbolsListDTO.self, interceptor: nil) { response, error in
             if let response = response {
+                // Store fetched responses in local storage
+                self.localStorage.create(object: response)
+                
                 completion(response, nil)
             } else {
-                completion(nil, error)
+                // Get stored responses in
+                self.localStorage.read(object: CurrencySymbolsListDTO.self) { object, error in
+                    if let object = object {
+                        completion(object, nil)
+                    } else {
+                        completion(nil, error)
+                    }
+                }
             }
         }
     }

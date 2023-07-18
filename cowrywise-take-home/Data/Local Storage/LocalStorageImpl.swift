@@ -13,14 +13,40 @@ class LocalStorageImpl: LocalStorage {
     
     init() {
         self.realm = try! Realm()
-        debugPrint(Realm.Configuration.defaultConfiguration.fileURL)
+        // debugPrint(Realm.Configuration.defaultConfiguration.fileURL)
     }
     
-    func read() {
-        
+    func create<ObjectType: Object>(object: ObjectType) {
+        do {
+            try realm.write {
+                realm.add(object, update: .modified)
+            }
+        } catch {
+            debugPrint(error)
+        }
     }
     
-    func write() {
-        
+    func read<ObjectType: Object>(object: ObjectType.Type, completion: @escaping (ObjectType?, Error?) -> Void) {
+        do {
+            try realm.write {
+                let object = realm.object(ofType: ObjectType.self, forPrimaryKey: ObjectType.primaryKey())
+                completion(object, nil)
+            }
+        } catch {
+            debugPrint(error)
+            completion(nil, error)
+        }
+    }
+    
+    func readAll<ObjectType: Object>(object: ObjectType.Type, completion: @escaping (Results<ObjectType>?, Error?) -> Void) {
+        do {
+            try realm.write {
+                let results = realm.objects(object)
+                completion(results, nil)
+            }
+        } catch {
+            debugPrint(error)
+            completion(nil, error)
+        }
     }
 }
