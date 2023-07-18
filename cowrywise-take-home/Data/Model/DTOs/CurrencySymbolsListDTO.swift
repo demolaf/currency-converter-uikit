@@ -21,9 +21,10 @@
 
 import Foundation
 import SwiftyJSON
+import RealmSwift
 
 // MARK: - CurrencySymbolsListDTO
-struct CurrencySymbolsListDTO: Decodable {
-    let success: Bool
-    let symbols: [String: String]
+class CurrencySymbolsListDTO: Object, Decodable {
+    @Persisted var success: Bool
+    @Persisted var symbols: Map<String, String>
 }

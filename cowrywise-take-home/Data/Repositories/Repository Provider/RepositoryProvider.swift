@@ -11,17 +11,19 @@ import Foundation
 // To get an instance of repository provider from app delegate
 // (UIApplication.shared.delegate as! AppDelegate).repositoryProvider
 struct RepositoryProvider  {
-    let currencyConverterRepository: CurrencyConverterRepository
-    
     private let apiClient: APIClient
+    private let localStorage: LocalStorage
     private let currencyConverterAPI: CurrencyConverterAPI
+    
+    let currencyConverterRepository: CurrencyConverterRepository
     
     init() {
         //
         self.apiClient = APIClientImpl()
+        self.localStorage = LocalStorageImpl()
         
         //
-        self.currencyConverterAPI = CurrencyConverterAPI(apiClient: apiClient)
+        self.currencyConverterAPI = CurrencyConverterAPI(apiClient: apiClient, localStorage: localStorage)
         
         //
         self.currencyConverterRepository = CurrencyConverterRepositoryImpl(currencyConverterAPI: currencyConverterAPI)

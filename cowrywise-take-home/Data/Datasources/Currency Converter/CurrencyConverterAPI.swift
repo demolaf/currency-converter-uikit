@@ -10,9 +10,11 @@ import Alamofire
 
 class CurrencyConverterAPI {
     let apiClient: APIClient
+    let localStorage: LocalStorage
     
-    init(apiClient: APIClient) {
+    init(apiClient: APIClient, localStorage: LocalStorage) {
         self.apiClient = apiClient
+        self.localStorage = localStorage
     }
     
     func getCurrencySymbolsList(completion: @escaping (CurrencySymbolsListDTO?, Error?) -> Void) {

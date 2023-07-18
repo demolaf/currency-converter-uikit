@@ -17,8 +17,8 @@ class CurrencyConverterRepositoryImpl: CurrencyConverterRepository {
     func getCurrencySymbols(completion: @escaping ([Symbols]) -> Void) {
         var currencySymbols = [Symbols]()
         currencyConverterAPI.getCurrencySymbolsList { response, error in
-            response?.symbols.forEach({ (key: String, value: String) in
-                currencySymbols.append(Symbols(name: value, abbreviation: key))
+            response?.symbols.forEach({ map in
+                currencySymbols.append(Symbols(name: map.value, abbreviation: map.key))
             })
             completion(currencySymbols)
         }

@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftyJSON
+import RealmSwift
 
 // MARK: - CurrencyConversionDTO
 struct CurrencyConversionDTO: Decodable {

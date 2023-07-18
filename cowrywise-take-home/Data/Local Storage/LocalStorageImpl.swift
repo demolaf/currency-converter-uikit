@@ -13,6 +13,7 @@ class LocalStorageImpl: LocalStorage {
     
     init() {
         self.realm = try! Realm()
+        debugPrint(Realm.Configuration.defaultConfiguration.fileURL)
     }
     
     func read() {
