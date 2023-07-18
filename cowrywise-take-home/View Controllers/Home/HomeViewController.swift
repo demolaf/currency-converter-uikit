@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 enum CurrencyPickers {
     case left
@@ -22,6 +23,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var leftCurrencyPickerLabel: UILabel!
     @IBOutlet weak var rightCurrencyPickerLabel: UILabel!
     @IBOutlet weak var chartView: UIView!
+    @IBOutlet weak var chartDataView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var convertButton: UIButton!
     
@@ -108,6 +110,21 @@ extension HomeViewController {
     private func setupChartView() {
         chartView.layer.cornerRadius = 30
         chartView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        
+        let controller = UIHostingController(rootView: ConversionChartHistory())
+        if let chart = controller.view {
+            chart.layer.backgroundColor = UIColor.clear.cgColor
+            chart.translatesAutoresizingMaskIntoConstraints = false
+            self.chartDataView.addSubview(chart)
+            NSLayoutConstraint.activate([
+                chart.centerXAnchor.constraint(equalTo: chartDataView.centerXAnchor),
+                chart.centerYAnchor.constraint(equalTo: chartDataView.centerYAnchor),
+                chart.widthAnchor.constraint(equalToConstant: self.chartDataView.bounds.width),
+                chart.heightAnchor.constraint(equalToConstant: self.chartDataView.bounds.height / 1.5),
+                chart.leftAnchor.constraint(equalTo: self.chartDataView.leftAnchor, constant: 0),
+                chart.rightAnchor.constraint(equalTo: self.chartDataView.rightAnchor, constant: 0),
+            ])
+        }
     }
     
     private func addDismissTextFieldViewTapped() {
@@ -199,4 +216,3 @@ extension HomeViewController: UITextFieldDelegate {
         return true
     }
 }
-

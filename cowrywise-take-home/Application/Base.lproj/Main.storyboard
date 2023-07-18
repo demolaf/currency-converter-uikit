@@ -107,10 +107,10 @@
                                 <rect key="frame" x="0.0" y="153" width="393" height="699"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cqG-Xm-nU0" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1148"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1248"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="iCQ-ov-smc">
-                                                <rect key="frame" x="0.0" y="0.0" width="393" height="1148"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="1248"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cMl-OB-dBR" userLabel="Main View">
                                                         <rect key="frame" x="0.0" y="0.0" width="393" height="600"/>
@@ -264,10 +264,69 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ygm-8W-tAl" userLabel="Chart View" customClass="GradientView" customModule="cowrywise_take_home" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="648" width="393" height="500"/>
+                                                        <rect key="frame" x="0.0" y="648" width="393" height="600"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UOj-kP-Exs">
+                                                                <rect key="frame" x="24" y="36" width="345" height="516"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="n9Q-zr-Kju">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="20.333333333333332"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Past 30 days" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dpb-Xe-mcm">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="172.66666666666666" height="20.333333333333332"/>
+                                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Past 90 days" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ohq-fJ-v3Z">
+                                                                                <rect key="frame" x="172.66666666666663" y="0.0" width="172.33333333333337" height="20.333333333333332"/>
+                                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Whn-pR-78a">
+                                                                        <rect key="frame" x="0.0" y="44.333333333333371" width="345" height="300"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="300" id="hvz-8U-v7Y"/>
+                                                                        </constraints>
+                                                                    </view>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="MbU-3P-xbg">
+                                                                        <rect key="frame" x="24" y="380.33333333333326" width="297" height="87.666666666666686"/>
+                                                                        <attributedString key="attributedText">
+                                                                            <fragment content="Get rate alerts straight to your email address">
+                                                                                <attributes>
+                                                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                    <font key="NSFont" metaFont="system" size="17"/>
+                                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                                    <integer key="NSUnderline" value="1"/>
+                                                                                </attributes>
+                                                                            </fragment>
+                                                                        </attributedString>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="trailing" secondItem="n9Q-zr-Kju" secondAttribute="trailing" id="0eN-9d-bS5"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="Whn-pR-78a" secondAttribute="trailing" id="4kP-Yz-FwC"/>
+                                                                    <constraint firstItem="Whn-pR-78a" firstAttribute="leading" secondItem="UOj-kP-Exs" secondAttribute="leading" id="AHT-zD-UTn"/>
+                                                                    <constraint firstItem="n9Q-zr-Kju" firstAttribute="top" secondItem="UOj-kP-Exs" secondAttribute="top" id="Dpw-LX-wux"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="MbU-3P-xbg" secondAttribute="bottom" constant="48" id="Vx6-aK-v9H"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="MbU-3P-xbg" secondAttribute="trailing" constant="24" id="bAV-dC-WSM"/>
+                                                                    <constraint firstItem="MbU-3P-xbg" firstAttribute="leading" secondItem="UOj-kP-Exs" secondAttribute="leading" constant="24" id="dbf-MX-PFA"/>
+                                                                    <constraint firstItem="n9Q-zr-Kju" firstAttribute="leading" secondItem="UOj-kP-Exs" secondAttribute="leading" id="dnD-qz-Qyv"/>
+                                                                    <constraint firstItem="Whn-pR-78a" firstAttribute="top" secondItem="n9Q-zr-Kju" secondAttribute="bottom" constant="24" id="eYS-qf-R1o"/>
+                                                                    <constraint firstItem="MbU-3P-xbg" firstAttribute="top" secondItem="Whn-pR-78a" secondAttribute="bottom" constant="36" id="teY-Nz-mVF"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
                                                         <color key="backgroundColor" name="primary"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="500" id="DFx-bV-EJu"/>
+                                                            <constraint firstAttribute="bottom" secondItem="UOj-kP-Exs" secondAttribute="bottom" constant="48" id="QLU-bE-QHU"/>
+                                                            <constraint firstAttribute="trailing" secondItem="UOj-kP-Exs" secondAttribute="trailing" constant="24" id="UQq-xT-Vca"/>
+                                                            <constraint firstItem="UOj-kP-Exs" firstAttribute="leading" secondItem="ygm-8W-tAl" secondAttribute="leading" constant="24" id="XDh-MV-pwu"/>
+                                                            <constraint firstItem="UOj-kP-Exs" firstAttribute="top" secondItem="ygm-8W-tAl" secondAttribute="top" constant="36" id="yqe-yb-3OR"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
@@ -315,6 +374,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Wzv-XJ-4uE"/>
                     <connections>
+                        <outlet property="chartDataView" destination="Whn-pR-78a" id="HZo-1Z-Cty"/>
                         <outlet property="chartView" destination="ygm-8W-tAl" id="cP1-VJ-ZaY"/>
                         <outlet property="convertButton" destination="n7g-Py-VdS" id="QUv-yu-WeU"/>
                         <outlet property="firstCurrencyTF" destination="f45-Bb-e2R" id="X1p-Xl-PLc"/>

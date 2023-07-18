@@ -44,8 +44,7 @@
 		7EC115262A64C95500F31DB6 /* CurrencyPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC115252A64C95500F31DB6 /* CurrencyPickerViewController.swift */; };
 		7EC1152F2A64EA8C00F31DB6 /* CurrencySymbolsListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC1152E2A64EA8C00F31DB6 /* CurrencySymbolsListDTO.swift */; };
 		7EE74E852A6619220050A6DC /* UIView+NoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE74E842A6619220050A6DC /* UIView+NoData.swift */; };
-		7EE74E872A66ACDB0050A6DC /* DGCharts.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE74E862A66ACDB0050A6DC /* DGCharts.xcframework */; };
-		7EE74E882A66ACDB0050A6DC /* DGCharts.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE74E862A66ACDB0050A6DC /* DGCharts.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7EE74E8A2A66C38B0050A6DC /* ConversionChartHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE74E892A66C38A0050A6DC /* ConversionChartHistory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -57,7 +56,6 @@
 			files = (
 				7EC1151E2A64BBEA00F31DB6 /* Alamofire.xcframework in Embed Frameworks */,
 				7E2AA8A42A6543E6005F3D40 /* SwiftyJSON.xcframework in Embed Frameworks */,
-				7EE74E882A66ACDB0050A6DC /* DGCharts.xcframework in Embed Frameworks */,
 				7E2AA8A72A6543EE005F3D40 /* Realm.xcframework in Embed Frameworks */,
 				7E2AA8AA2A6543F4005F3D40 /* RealmSwift.xcframework in Embed Frameworks */,
 			);
@@ -104,6 +102,7 @@
 		7EC1152E2A64EA8C00F31DB6 /* CurrencySymbolsListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySymbolsListDTO.swift; sourceTree = "<group>"; };
 		7EE74E842A6619220050A6DC /* UIView+NoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+NoData.swift"; sourceTree = "<group>"; };
 		7EE74E862A66ACDB0050A6DC /* DGCharts.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = DGCharts.xcframework; path = Carthage/Build/DGCharts.xcframework; sourceTree = "<group>"; };
+		7EE74E892A66C38A0050A6DC /* ConversionChartHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionChartHistory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +112,6 @@
 			files = (
 				7EC1151D2A64BBEA00F31DB6 /* Alamofire.xcframework in Frameworks */,
 				7E2AA8A32A6543E6005F3D40 /* SwiftyJSON.xcframework in Frameworks */,
-				7EE74E872A66ACDB0050A6DC /* DGCharts.xcframework in Frameworks */,
 				7E2AA8A62A6543EE005F3D40 /* Realm.xcframework in Frameworks */,
 				7E2AA8A92A6543F4005F3D40 /* RealmSwift.xcframework in Frameworks */,
 			);
@@ -296,6 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				7E003C4B2A65B002002E9331 /* Currency Picker View */,
+				7EE74E892A66C38A0050A6DC /* ConversionChartHistory.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -460,7 +459,6 @@
 				"$(SRCROOT)/Carthage/Build/SwiftyJSON.framework",
 				"$(SRCROOT)/Carthage/Build/Realm.framework",
 				"$(SRCROOT)/Carthage/Build/RealmSwift.framework",
-				"$(SRCROOT)/Carthage/Build/DGCharts.framework",
 			);
 			name = "Run Script";
 			outputFileListPaths = (
@@ -481,6 +479,7 @@
 				7E2AA8B22A6549FA005F3D40 /* CurrencyConverterAPI.swift in Sources */,
 				7EC115232A64BE5D00F31DB6 /* APIClientImpl.swift in Sources */,
 				7E2AA8AF2A6549B4005F3D40 /* CurrencyConverterRepositoryImpl.swift in Sources */,
+				7EE74E8A2A66C38B0050A6DC /* ConversionChartHistory.swift in Sources */,
 				7EE74E852A6619220050A6DC /* UIView+NoData.swift in Sources */,
 				7E2AA8AD2A6549A5005F3D40 /* CurrencyConverterRepository.swift in Sources */,
 				7E003C492A65AFF6002E9331 /* CurrencyPickerView.swift in Sources */,
