@@ -19,3 +19,11 @@
 </p>
 
 ## Installation
+
+Setup Carthage
+
+- After checking out project
+run carthage bootstrap
+
+- To upgrade dependencies (For iOS Platform only)
+run carthage update -platform iOS --use-xcframeworks
