@@ -29,4 +29,10 @@ class CurrencyConverterRepositoryImpl: CurrencyConverterRepository {
             completion(conversionResult)
         }
     }
+    
+    func getCurrencyConversionHistory(completion: @escaping ([CurrencyConversionDTO]) -> Void) {
+        currencyConverterAPI.getConvertedCurrencyValues { result, error in
+            completion(result)
+        }
+    }
 }

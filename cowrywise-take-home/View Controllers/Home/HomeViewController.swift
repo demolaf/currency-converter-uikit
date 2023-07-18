@@ -111,6 +111,10 @@ extension HomeViewController {
         chartView.layer.cornerRadius = 30
         chartView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         
+        currencyConverterRepository.getCurrencyConversionHistory { convertedValues in
+            debugPrint("Here: \(convertedValues)")
+        }
+        
         let controller = UIHostingController(rootView: ConversionChartHistory())
         if let chart = controller.view {
             chart.layer.backgroundColor = UIColor.clear.cgColor

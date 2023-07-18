@@ -24,7 +24,7 @@ class CurrencyConverterAPI {
         apiClient.get(url: APIConstants.Endpoints.getCurrencySymbolsList.url, headers: nil, parameters: params, response: CurrencySymbolsListDTO.self, interceptor: nil) { response, error in
             if let response = response {
                 // Store fetched responses in local storage
-                self.localStorage.create(object: response)
+                self.localStorage.create(object: response, realmUpdatePolicy: .modified)
                 
                 completion(response, nil)
             } else {
@@ -52,10 +52,29 @@ class CurrencyConverterAPI {
         
         apiClient.get(url: APIConstants.Endpoints.convertCurrencyXE.url, headers: nil, parameters: params, response: CurrencyConversionDTO.self, interceptor: nil) { response, error in
             if let response = response {
+                // Store fetched responses in local storage
+                self.localStorage.create(object: response, realmUpdatePolicy: .all)
+                
                 completion(response.to.first?.mid, nil)
             } else {
                 completion(nil, error)
             }
         }?.authenticate(username: user, password: password)
+    }
+    
+    func getConvertedCurrencyValues(completion: @escaping ([CurrencyConversionDTO], Error?) -> Void) {
+        self.localStorage.readAll(object: CurrencyConversionDTO.self) { results, error in
+            var currencyConvertedHistory = [CurrencyConversionDTO]()
+            
+            if let results = results {
+                let values = results.sorted(byKeyPath: "createdAt", ascending: false)
+                values.forEach { currencyConverted in
+                    currencyConvertedHistory.append(currencyConverted)
+                }
+                completion(currencyConvertedHistory, nil)
+            } else {
+                completion([], error)
+            }
+        }
     }
 }

@@ -9,7 +9,7 @@ import Foundation
 import RealmSwift
 
 protocol LocalStorage {
-    func create<ObjectType: Object>(object: ObjectType)
+    func create<ObjectType: Object>(object: ObjectType, realmUpdatePolicy: Realm.UpdatePolicy)
     
     func read<ObjectType: Object>(object: ObjectType.Type, completion: @escaping (ObjectType?, Error?) -> Void)
     

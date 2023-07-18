@@ -10,16 +10,18 @@ import SwiftyJSON
 import RealmSwift
 
 // MARK: - CurrencyConversionDTO
-struct CurrencyConversionDTO: Decodable {
-    let to: [To]
+class CurrencyConversionDTO: Object, Decodable {
+    @Persisted(primaryKey: true) var _id: ObjectId
+    @Persisted var to: List<To>
+    @Persisted var createdAt: Date = Date()
     
-    init(json: JSON) {
-        self.to = json["to"].arrayObject as! [To]
+    private enum CodingKeys: String, CodingKey {
+        case to
     }
 }
 
 // MARK: - To
-struct To: Decodable {
-    let quotecurrency: String
-    let mid: Double
+class To: Object, Decodable {
+    @Persisted var quotecurrency: String
+    @Persisted var mid: Double
 }
