@@ -28,7 +28,7 @@ class CurrencyConverterAPI {
                 
                 completion(response, nil)
             } else {
-                // Get stored responses in
+                // Get stored response in local storage if error fetching from remote
                 self.localStorage.read(object: CurrencySymbolsListDTO.self) { object, error in
                     if let object = object {
                         completion(object, nil)
