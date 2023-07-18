@@ -17,7 +17,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var firstCurrencyTF: UITextField!
     @IBOutlet weak var secondCurrencyTF: UITextField!
-    @IBOutlet weak var leftCurrencyPickerView: UIView!
+    @IBOutlet weak var leftCurrencyPickerView: UIStackView!
     @IBOutlet weak var rightCurrencyPickerView: UIView!
     @IBOutlet weak var leftCurrencyPickerLabel: UILabel!
     @IBOutlet weak var rightCurrencyPickerLabel: UILabel!
@@ -57,8 +57,13 @@ class HomeViewController: UIViewController {
         }
         
         currencyConverterRepository.convertToCurrency(from: selectedCurrencyLeftCurrencyPicker.abbreviation, to: selectedCurrencyRightCurrencyPicker.abbreviation, amount: Double(amount) ?? 0) { conversionResult in
+            guard let conversionResult = conversionResult else {
+                self.convertButton.configuration?.showsActivityIndicator = false
+                self.showUIAlertView(title: "Error!", message: "Could not convert value")
+                return
+            }
             
-            self.secondCurrencyTF.text = String(conversionResult ?? 0)
+            self.secondCurrencyTF.text = String(conversionResult)
             self.convertButton.configuration?.showsActivityIndicator = false
         }
     }
@@ -78,7 +83,7 @@ class HomeViewController: UIViewController {
             }
             
             self.setupCurrencyPickers()
-            self.setupTFAppearance()
+            self.setupTextFieldAppearance()
         }
         
         present(currencyPickerVC, animated: true)
@@ -90,9 +95,10 @@ extension HomeViewController {
         setupCurrencyPickers()
         setHeaderTextAttributes()
         setupTF()
-        setupTFAppearance()
+        setupTextFieldAppearance()
         setupChartView()
         setupScrollView()
+        addDismissTextFieldViewTapped()
     }
     
     private func setupScrollView() {
@@ -102,6 +108,22 @@ extension HomeViewController {
     private func setupChartView() {
         chartView.layer.cornerRadius = 30
         chartView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+    }
+    
+    private func addDismissTextFieldViewTapped() {
+        //Looks for single or multiple taps.
+         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+
+        //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
+        //tap.cancelsTouchesInView = false
+
+        view.addGestureRecognizer(tap)
+    }
+    
+    //Calls this function when the tap is recognized.
+    @objc func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
     
     private func setupCurrencyPickers() {
@@ -124,11 +146,12 @@ extension HomeViewController {
         firstCurrencyTF.delegate = self
         secondCurrencyTF.delegate = self
         
-        firstCurrencyTF.layer.borderWidth = 0
-        secondCurrencyTF.layer.borderColor = UIColor.clear.cgColor
+        firstCurrencyTF.attributedPlaceholder = NSAttributedString(string: "Enter an amount e.g. 1000", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+        
+        secondCurrencyTF.attributedPlaceholder = NSAttributedString(string: "Output", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
     }
     
-    private func setupTFAppearance() {
+    private func setupTextFieldAppearance() {
         //
         let firstCurrencyTFSuffix = UILabel()
         firstCurrencyTFSuffix.text = selectedCurrencyLeftCurrencyPicker.abbreviation

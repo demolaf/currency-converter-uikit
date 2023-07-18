@@ -45,6 +45,13 @@ class CurrencyPickerViewController: UIViewController {
         self.loadingActivity.startAnimating()
         self.pickerView.isHidden = true
         currencyConverterRepository.getCurrencySymbols { symbols in
+            guard !symbols.isEmpty else {
+                self.loadingActivity.stopAnimating()
+                self.pickerView.isHidden = true
+                self.view.setEmptyView(title: "No Data", message: "Could not fetch currency symbols")
+                return
+            }
+            
             self.fetchSymbolsList = symbols
             
             self.loadingActivity.stopAnimating()

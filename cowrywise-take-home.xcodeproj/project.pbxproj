@@ -43,6 +43,7 @@
 		7EC115232A64BE5D00F31DB6 /* APIClientImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC115222A64BE5D00F31DB6 /* APIClientImpl.swift */; };
 		7EC115262A64C95500F31DB6 /* CurrencyPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC115252A64C95500F31DB6 /* CurrencyPickerViewController.swift */; };
 		7EC1152F2A64EA8C00F31DB6 /* CurrencySymbolsListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC1152E2A64EA8C00F31DB6 /* CurrencySymbolsListDTO.swift */; };
+		7EE74E852A6619220050A6DC /* UIView+NoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE74E842A6619220050A6DC /* UIView+NoData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -98,6 +99,7 @@
 		7EC115252A64C95500F31DB6 /* CurrencyPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPickerViewController.swift; sourceTree = "<group>"; };
 		7EC115272A64D98E00F31DB6 /* SwiftyJSON.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SwiftyJSON.xcframework; path = Carthage/Build/SwiftyJSON.xcframework; sourceTree = "<group>"; };
 		7EC1152E2A64EA8C00F31DB6 /* CurrencySymbolsListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySymbolsListDTO.swift; sourceTree = "<group>"; };
+		7EE74E842A6619220050A6DC /* UIView+NoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+NoData.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				7E003C512A65F2B4002E9331 /* UIViewController+Alert.swift */,
+				7EE74E842A6619220050A6DC /* UIView+NoData.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 				7E2AA8B22A6549FA005F3D40 /* CurrencyConverterAPI.swift in Sources */,
 				7EC115232A64BE5D00F31DB6 /* APIClientImpl.swift in Sources */,
 				7E2AA8AF2A6549B4005F3D40 /* CurrencyConverterRepositoryImpl.swift in Sources */,
+				7EE74E852A6619220050A6DC /* UIView+NoData.swift in Sources */,
 				7E2AA8AD2A6549A5005F3D40 /* CurrencyConverterRepository.swift in Sources */,
 				7E003C492A65AFF6002E9331 /* CurrencyPickerView.swift in Sources */,
 				7EC114EF2A64631F00F31DB6 /* HomeViewController.swift in Sources */,
