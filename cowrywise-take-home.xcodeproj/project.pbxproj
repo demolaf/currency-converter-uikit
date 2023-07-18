@@ -44,6 +44,8 @@
 		7EC115262A64C95500F31DB6 /* CurrencyPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC115252A64C95500F31DB6 /* CurrencyPickerViewController.swift */; };
 		7EC1152F2A64EA8C00F31DB6 /* CurrencySymbolsListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC1152E2A64EA8C00F31DB6 /* CurrencySymbolsListDTO.swift */; };
 		7EE74E852A6619220050A6DC /* UIView+NoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE74E842A6619220050A6DC /* UIView+NoData.swift */; };
+		7EE74E872A66ACDB0050A6DC /* DGCharts.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE74E862A66ACDB0050A6DC /* DGCharts.xcframework */; };
+		7EE74E882A66ACDB0050A6DC /* DGCharts.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE74E862A66ACDB0050A6DC /* DGCharts.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -55,6 +57,7 @@
 			files = (
 				7EC1151E2A64BBEA00F31DB6 /* Alamofire.xcframework in Embed Frameworks */,
 				7E2AA8A42A6543E6005F3D40 /* SwiftyJSON.xcframework in Embed Frameworks */,
+				7EE74E882A66ACDB0050A6DC /* DGCharts.xcframework in Embed Frameworks */,
 				7E2AA8A72A6543EE005F3D40 /* Realm.xcframework in Embed Frameworks */,
 				7E2AA8AA2A6543F4005F3D40 /* RealmSwift.xcframework in Embed Frameworks */,
 			);
@@ -100,6 +103,7 @@
 		7EC115272A64D98E00F31DB6 /* SwiftyJSON.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SwiftyJSON.xcframework; path = Carthage/Build/SwiftyJSON.xcframework; sourceTree = "<group>"; };
 		7EC1152E2A64EA8C00F31DB6 /* CurrencySymbolsListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySymbolsListDTO.swift; sourceTree = "<group>"; };
 		7EE74E842A6619220050A6DC /* UIView+NoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+NoData.swift"; sourceTree = "<group>"; };
+		7EE74E862A66ACDB0050A6DC /* DGCharts.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = DGCharts.xcframework; path = Carthage/Build/DGCharts.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,7 @@
 			files = (
 				7EC1151D2A64BBEA00F31DB6 /* Alamofire.xcframework in Frameworks */,
 				7E2AA8A32A6543E6005F3D40 /* SwiftyJSON.xcframework in Frameworks */,
+				7EE74E872A66ACDB0050A6DC /* DGCharts.xcframework in Frameworks */,
 				7E2AA8A62A6543EE005F3D40 /* Realm.xcframework in Frameworks */,
 				7E2AA8A92A6543F4005F3D40 /* RealmSwift.xcframework in Frameworks */,
 			);
@@ -298,6 +303,7 @@
 		7EC115122A64B96F00F31DB6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7EE74E862A66ACDB0050A6DC /* DGCharts.xcframework */,
 				7E2AA8A82A6543F3005F3D40 /* RealmSwift.xcframework */,
 				7E2AA8A52A6543EE005F3D40 /* Realm.xcframework */,
 				7EC115272A64D98E00F31DB6 /* SwiftyJSON.xcframework */,
@@ -454,6 +460,7 @@
 				"$(SRCROOT)/Carthage/Build/SwiftyJSON.framework",
 				"$(SRCROOT)/Carthage/Build/Realm.framework",
 				"$(SRCROOT)/Carthage/Build/RealmSwift.framework",
+				"$(SRCROOT)/Carthage/Build/DGCharts.framework",
 			);
 			name = "Run Script";
 			outputFileListPaths = (

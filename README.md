@@ -26,4 +26,4 @@ Setup Carthage
 run "carthage bootstrap"
 
 - To upgrade dependencies (For iOS Platform only)
-run "carthage update -platform iOS --use-xcframeworks"
+run "carthage update --platform iOS --use-xcframeworks"
