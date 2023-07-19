@@ -113,22 +113,21 @@ extension HomeViewController {
         
         currencyConverterRepository.getCurrencyConversionHistory { convertedValues in
             debugPrint("Here: \(convertedValues)")
-            
-            let controller = UIHostingController(rootView: ConversionChartHistory(data: convertedValues))
-            
-            if let chart = controller.view {
-                chart.layer.backgroundColor = UIColor.clear.cgColor
-                chart.translatesAutoresizingMaskIntoConstraints = false
-                self.chartDataView.addSubview(chart)
-                NSLayoutConstraint.activate([
-                    chart.centerXAnchor.constraint(equalTo: self.chartDataView.centerXAnchor),
-                    chart.centerYAnchor.constraint(equalTo: self.chartDataView.centerYAnchor),
-                    chart.widthAnchor.constraint(equalToConstant: self.chartDataView.bounds.width),
-                    chart.heightAnchor.constraint(equalToConstant: self.chartDataView.bounds.height / 1.5),
-                    chart.leftAnchor.constraint(equalTo: self.chartDataView.leftAnchor, constant: 0),
-                    chart.rightAnchor.constraint(equalTo: self.chartDataView.rightAnchor, constant: 0),
-                ])
-            }
+        }
+        
+        let controller = UIHostingController(rootView: ConversionChartHistory(data: [CurrencyConversionDTO]()))
+        if let chart = controller.view {
+            chart.layer.backgroundColor = UIColor.clear.cgColor
+            chart.translatesAutoresizingMaskIntoConstraints = false
+            self.chartDataView.addSubview(chart)
+            NSLayoutConstraint.activate([
+                chart.centerXAnchor.constraint(equalTo: chartDataView.centerXAnchor),
+                chart.centerYAnchor.constraint(equalTo: chartDataView.centerYAnchor),
+                chart.widthAnchor.constraint(equalToConstant: self.chartDataView.bounds.width),
+                chart.heightAnchor.constraint(equalToConstant: self.chartDataView.bounds.height / 1.5),
+                chart.leftAnchor.constraint(equalTo: self.chartDataView.leftAnchor, constant: 0),
+                chart.rightAnchor.constraint(equalTo: self.chartDataView.rightAnchor, constant: 0),
+            ])
         }
     }
     
