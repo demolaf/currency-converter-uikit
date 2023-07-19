@@ -10,7 +10,7 @@ import SwiftyJSON
 import RealmSwift
 
 // MARK: - CurrencyConversionDTO
-class CurrencyConversionDTO: Object, Decodable {
+class CurrencyConversionDTO: Object, Identifiable, Decodable {
     @Persisted(primaryKey: true) var _id: ObjectId
     @Persisted var to: List<To>
     @Persisted var createdAt: Date = Date()

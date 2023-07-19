@@ -13,7 +13,7 @@ class LocalStorageImpl: LocalStorage {
     
     init() {
         self.realm = try! Realm()
-        debugPrint(Realm.Configuration.defaultConfiguration.fileURL)
+        // debugPrint(Realm.Configuration.defaultConfiguration.fileURL)
     }
     
     func create<ObjectType: Object>(object: ObjectType, realmUpdatePolicy: Realm.UpdatePolicy) {
