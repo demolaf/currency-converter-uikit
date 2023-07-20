@@ -1,6 +1,5 @@
 //
 //  UIView+NoData.swift
-//  cowrywise-take-home
 //
 //  Created by Ademola Fadumo on 18/07/2023.
 //

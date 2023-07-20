@@ -1,6 +1,6 @@
 //
-//  cowrywise_take_homeTests.swift
-//  cowrywise-take-homeTests
+//  currency-converter-uikitTests.swift
+//  currency-converter-uikitTests
 //
 //  Created by Ademola Fadumo on 19/07/2023.
 //
