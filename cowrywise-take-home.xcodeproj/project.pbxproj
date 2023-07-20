@@ -28,6 +28,7 @@
 		7E2AA8B82A655896005F3D40 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2AA8B72A655896005F3D40 /* LocalStorage.swift */; };
 		7E2AA8BA2A6558A2005F3D40 /* LocalStorageImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2AA8B92A6558A2005F3D40 /* LocalStorageImpl.swift */; };
 		7E2AA8BD2A655AAE005F3D40 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2AA8BC2A655AAE005F3D40 /* GradientView.swift */; };
+		7E5384352A677F450003C435 /* PlistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5384342A677F450003C435 /* PlistTests.swift */; };
 		7EC114EB2A64631F00F31DB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC114EA2A64631F00F31DB6 /* AppDelegate.swift */; };
 		7EC114ED2A64631F00F31DB6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC114EC2A64631F00F31DB6 /* SceneDelegate.swift */; };
 		7EC114EF2A64631F00F31DB6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC114EE2A64631F00F31DB6 /* HomeViewController.swift */; };
@@ -46,6 +47,16 @@
 		7EE74E852A6619220050A6DC /* UIView+NoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE74E842A6619220050A6DC /* UIView+NoData.swift */; };
 		7EE74E8A2A66C38B0050A6DC /* ConversionChartHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE74E892A66C38A0050A6DC /* ConversionChartHistory.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7E5384362A677F450003C435 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7EC114DF2A64631F00F31DB6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7EC114E62A64631F00F31DB6;
+			remoteInfo = "cowrywise-take-home";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		7EC1151F2A64BBEA00F31DB6 /* Embed Frameworks */ = {
@@ -82,6 +93,8 @@
 		7E2AA8B72A655896005F3D40 /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
 		7E2AA8B92A6558A2005F3D40 /* LocalStorageImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageImpl.swift; sourceTree = "<group>"; };
 		7E2AA8BC2A655AAE005F3D40 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		7E5384322A677F450003C435 /* cowrywise-take-homeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "cowrywise-take-homeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E5384342A677F450003C435 /* PlistTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistTests.swift; sourceTree = "<group>"; };
 		7EC114E72A64631F00F31DB6 /* cowrywise-take-home.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cowrywise-take-home.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EC114EA2A64631F00F31DB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EC114EC2A64631F00F31DB6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +119,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7E53842F2A677F450003C435 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7EC114E42A64631F00F31DB6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -199,11 +219,20 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		7E5384332A677F450003C435 /* cowrywise-take-homeTests */ = {
+			isa = PBXGroup;
+			children = (
+				7E5384342A677F450003C435 /* PlistTests.swift */,
+			);
+			path = "cowrywise-take-homeTests";
+			sourceTree = "<group>";
+		};
 		7EC114DE2A64631F00F31DB6 = {
 			isa = PBXGroup;
 			children = (
 				7E003C532A65F70B002E9331 /* ReadMeAssets */,
 				7EC114E92A64631F00F31DB6 /* cowrywise-take-home */,
+				7E5384332A677F450003C435 /* cowrywise-take-homeTests */,
 				7EC114E82A64631F00F31DB6 /* Products */,
 				7EC115122A64B96F00F31DB6 /* Frameworks */,
 			);
@@ -213,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				7EC114E72A64631F00F31DB6 /* cowrywise-take-home.app */,
+				7E5384322A677F450003C435 /* cowrywise-take-homeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -375,6 +405,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		7E5384312A677F450003C435 /* cowrywise-take-homeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E53843A2A677F450003C435 /* Build configuration list for PBXNativeTarget "cowrywise-take-homeTests" */;
+			buildPhases = (
+				7E53842E2A677F450003C435 /* Sources */,
+				7E53842F2A677F450003C435 /* Frameworks */,
+				7E5384302A677F450003C435 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7E5384372A677F450003C435 /* PBXTargetDependency */,
+			);
+			name = "cowrywise-take-homeTests";
+			productName = "cowrywise-take-homeTests";
+			productReference = 7E5384322A677F450003C435 /* cowrywise-take-homeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		7EC114E62A64631F00F31DB6 /* cowrywise-take-home */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7EC114FB2A64631F00F31DB6 /* Build configuration list for PBXNativeTarget "cowrywise-take-home" */;
@@ -404,6 +452,10 @@
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					7E5384312A677F450003C435 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 7EC114E62A64631F00F31DB6;
+					};
 					7EC114E62A64631F00F31DB6 = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
@@ -423,11 +475,19 @@
 			projectRoot = "";
 			targets = (
 				7EC114E62A64631F00F31DB6 /* cowrywise-take-home */,
+				7E5384312A677F450003C435 /* cowrywise-take-homeTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7E5384302A677F450003C435 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7EC114E52A64631F00F31DB6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -472,6 +532,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7E53842E2A677F450003C435 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E5384352A677F450003C435 /* PlistTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7EC114E32A64631F00F31DB6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -503,6 +571,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		7E5384372A677F450003C435 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7EC114E62A64631F00F31DB6 /* cowrywise-take-home */;
+			targetProxy = 7E5384362A677F450003C435 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		7EC114F02A64631F00F31DB6 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -523,6 +599,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		7E5384382A677F450003C435 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3G33A99C47;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aob.cowrywise-take-homeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cowrywise-take-home.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/cowrywise-take-home";
+			};
+			name = Debug;
+		};
+		7E5384392A677F450003C435 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3G33A99C47;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aob.cowrywise-take-homeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cowrywise-take-home.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/cowrywise-take-home";
+			};
+			name = Release;
+		};
 		7EC114F92A64631F00F31DB6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -696,6 +808,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7E53843A2A677F450003C435 /* Build configuration list for PBXNativeTarget "cowrywise-take-homeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E5384382A677F450003C435 /* Debug */,
+				7E5384392A677F450003C435 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		7EC114E22A64631F00F31DB6 /* Build configuration list for PBXProject "cowrywise-take-home" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

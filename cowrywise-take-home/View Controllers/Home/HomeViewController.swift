@@ -116,6 +116,7 @@ extension HomeViewController {
         }
         
         let controller = UIHostingController(rootView: ConversionChartHistory(data: [CurrencyConversionDTO]()))
+        
         if let chart = controller.view {
             chart.layer.backgroundColor = UIColor.clear.cgColor
             chart.translatesAutoresizingMaskIntoConstraints = false

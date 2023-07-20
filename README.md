@@ -1,6 +1,6 @@
-# cowry-take-home
+# Currency Converter - UIKit
 
-ℹ️ Take home project for Cowrywise
+ℹ️ A currency converter app built with uikit
 
 ## Libraries Used
 - Alamofire
