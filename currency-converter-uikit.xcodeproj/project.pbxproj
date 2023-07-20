@@ -29,11 +29,11 @@
 		7E2AA8BA2A6558A2005F3D40 /* LocalStorageImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2AA8B92A6558A2005F3D40 /* LocalStorageImpl.swift */; };
 		7E2AA8BD2A655AAE005F3D40 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2AA8BC2A655AAE005F3D40 /* GradientView.swift */; };
 		7E5384352A677F450003C435 /* PlistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5384342A677F450003C435 /* PlistTests.swift */; };
+		7E9A2A532A69C001009489FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E9A2A522A69C001009489FB /* Assets.xcassets */; };
 		7EC114EB2A64631F00F31DB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC114EA2A64631F00F31DB6 /* AppDelegate.swift */; };
 		7EC114ED2A64631F00F31DB6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC114EC2A64631F00F31DB6 /* SceneDelegate.swift */; };
 		7EC114EF2A64631F00F31DB6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC114EE2A64631F00F31DB6 /* HomeViewController.swift */; };
 		7EC114F22A64631F00F31DB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EC114F02A64631F00F31DB6 /* Main.storyboard */; };
-		7EC114F42A64631F00F31DB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EC114F32A64631F00F31DB6 /* Assets.xcassets */; };
 		7EC114F72A64631F00F31DB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EC114F52A64631F00F31DB6 /* LaunchScreen.storyboard */; };
 		7EC115032A64698F00F31DB6 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EC115022A64698F00F31DB6 /* Colors.xcassets */; };
 		7EC115082A6469D500F31DB6 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC115072A6469D500F31DB6 /* Colors.swift */; };
@@ -93,14 +93,14 @@
 		7E2AA8B72A655896005F3D40 /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
 		7E2AA8B92A6558A2005F3D40 /* LocalStorageImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageImpl.swift; sourceTree = "<group>"; };
 		7E2AA8BC2A655AAE005F3D40 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
-		7E5384322A677F450003C435 /* cowrywise-take-homeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "cowrywise-take-homeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E5384322A677F450003C435 /* currency-converter-uikitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "currency-converter-uikitTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E5384342A677F450003C435 /* PlistTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistTests.swift; sourceTree = "<group>"; };
-		7EC114E72A64631F00F31DB6 /* cowrywise-take-home.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cowrywise-take-home.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E9A2A522A69C001009489FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "currency-converter-uikit/Assets.xcassets"; sourceTree = SOURCE_ROOT; };
+		7EC114E72A64631F00F31DB6 /* currency-converter-uikit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "currency-converter-uikit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EC114EA2A64631F00F31DB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EC114EC2A64631F00F31DB6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7EC114EE2A64631F00F31DB6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7EC114F12A64631F00F31DB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		7EC114F32A64631F00F31DB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "cowrywise-take-home/Assets.xcassets"; sourceTree = SOURCE_ROOT; };
 		7EC114F62A64631F00F31DB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7EC114F82A64631F00F31DB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EC115022A64698F00F31DB6 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -219,20 +219,20 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		7E5384332A677F450003C435 /* cowrywise-take-homeTests */ = {
+		7E5384332A677F450003C435 /* currency-converter-uikitTests */ = {
 			isa = PBXGroup;
 			children = (
 				7E5384342A677F450003C435 /* PlistTests.swift */,
 			);
-			path = "cowrywise-take-homeTests";
+			path = "currency-converter-uikitTests";
 			sourceTree = "<group>";
 		};
 		7EC114DE2A64631F00F31DB6 = {
 			isa = PBXGroup;
 			children = (
 				7E003C532A65F70B002E9331 /* ReadMeAssets */,
-				7EC114E92A64631F00F31DB6 /* cowrywise-take-home */,
-				7E5384332A677F450003C435 /* cowrywise-take-homeTests */,
+				7EC114E92A64631F00F31DB6 /* currency-converter-uikit */,
+				7E5384332A677F450003C435 /* currency-converter-uikitTests */,
 				7EC114E82A64631F00F31DB6 /* Products */,
 				7EC115122A64B96F00F31DB6 /* Frameworks */,
 			);
@@ -241,13 +241,13 @@
 		7EC114E82A64631F00F31DB6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7EC114E72A64631F00F31DB6 /* cowrywise-take-home.app */,
-				7E5384322A677F450003C435 /* cowrywise-take-homeTests.xctest */,
+				7EC114E72A64631F00F31DB6 /* currency-converter-uikit.app */,
+				7E5384322A677F450003C435 /* currency-converter-uikitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7EC114E92A64631F00F31DB6 /* cowrywise-take-home */ = {
+		7EC114E92A64631F00F31DB6 /* currency-converter-uikit */ = {
 			isa = PBXGroup;
 			children = (
 				7EC114FF2A6467B900F31DB6 /* Assets */,
@@ -256,7 +256,7 @@
 				7EC114FE2A6467A600F31DB6 /* Application */,
 				7EC114F82A64631F00F31DB6 /* Info.plist */,
 			);
-			path = "cowrywise-take-home";
+			path = "currency-converter-uikit";
 			sourceTree = "<group>";
 		};
 		7EC114FE2A6467A600F31DB6 /* Application */ = {
@@ -274,8 +274,8 @@
 			isa = PBXGroup;
 			children = (
 				7EC115062A6469B800F31DB6 /* Resources */,
+				7E9A2A522A69C001009489FB /* Assets.xcassets */,
 				7EC115022A64698F00F31DB6 /* Colors.xcassets */,
-				7EC114F32A64631F00F31DB6 /* Assets.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -405,9 +405,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7E5384312A677F450003C435 /* cowrywise-take-homeTests */ = {
+		7E5384312A677F450003C435 /* currency-converter-uikitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7E53843A2A677F450003C435 /* Build configuration list for PBXNativeTarget "cowrywise-take-homeTests" */;
+			buildConfigurationList = 7E53843A2A677F450003C435 /* Build configuration list for PBXNativeTarget "currency-converter-uikitTests" */;
 			buildPhases = (
 				7E53842E2A677F450003C435 /* Sources */,
 				7E53842F2A677F450003C435 /* Frameworks */,
@@ -418,14 +418,14 @@
 			dependencies = (
 				7E5384372A677F450003C435 /* PBXTargetDependency */,
 			);
-			name = "cowrywise-take-homeTests";
+			name = "currency-converter-uikitTests";
 			productName = "cowrywise-take-homeTests";
-			productReference = 7E5384322A677F450003C435 /* cowrywise-take-homeTests.xctest */;
+			productReference = 7E5384322A677F450003C435 /* currency-converter-uikitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		7EC114E62A64631F00F31DB6 /* cowrywise-take-home */ = {
+		7EC114E62A64631F00F31DB6 /* currency-converter-uikit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7EC114FB2A64631F00F31DB6 /* Build configuration list for PBXNativeTarget "cowrywise-take-home" */;
+			buildConfigurationList = 7EC114FB2A64631F00F31DB6 /* Build configuration list for PBXNativeTarget "currency-converter-uikit" */;
 			buildPhases = (
 				7EC114E32A64631F00F31DB6 /* Sources */,
 				7EC114E42A64631F00F31DB6 /* Frameworks */,
@@ -437,9 +437,9 @@
 			);
 			dependencies = (
 			);
-			name = "cowrywise-take-home";
+			name = "currency-converter-uikit";
 			productName = "cowrywise-take-home";
-			productReference = 7EC114E72A64631F00F31DB6 /* cowrywise-take-home.app */;
+			productReference = 7EC114E72A64631F00F31DB6 /* currency-converter-uikit.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -461,7 +461,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7EC114E22A64631F00F31DB6 /* Build configuration list for PBXProject "cowrywise-take-home" */;
+			buildConfigurationList = 7EC114E22A64631F00F31DB6 /* Build configuration list for PBXProject "currency-converter-uikit" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -474,8 +474,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7EC114E62A64631F00F31DB6 /* cowrywise-take-home */,
-				7E5384312A677F450003C435 /* cowrywise-take-homeTests */,
+				7EC114E62A64631F00F31DB6 /* currency-converter-uikit */,
+				7E5384312A677F450003C435 /* currency-converter-uikitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -496,9 +496,9 @@
 				7EC114F72A64631F00F31DB6 /* LaunchScreen.storyboard in Resources */,
 				7EC115032A64698F00F31DB6 /* Colors.xcassets in Resources */,
 				7E003C582A65F728002E9331 /* view2.png in Resources */,
-				7EC114F42A64631F00F31DB6 /* Assets.xcassets in Resources */,
 				7E003C592A65F728002E9331 /* view1.png in Resources */,
 				7EC114F22A64631F00F31DB6 /* Main.storyboard in Resources */,
+				7E9A2A532A69C001009489FB /* Assets.xcassets in Resources */,
 				7E003C4A2A65AFF6002E9331 /* CurrencyPickerView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -574,7 +574,7 @@
 /* Begin PBXTargetDependency section */
 		7E5384372A677F450003C435 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7EC114E62A64631F00F31DB6 /* cowrywise-take-home */;
+			target = 7EC114E62A64631F00F31DB6 /* currency-converter-uikit */;
 			targetProxy = 7E5384362A677F450003C435 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -608,12 +608,12 @@
 				DEVELOPMENT_TEAM = 3G33A99C47;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.aob.cowrywise-take-homeTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aob.currency-converter-uikitTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cowrywise-take-home.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/cowrywise-take-home";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/currency-converter-uikit.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/currency-converter-uikit";
 			};
 			name = Debug;
 		};
@@ -626,12 +626,12 @@
 				DEVELOPMENT_TEAM = 3G33A99C47;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.aob.cowrywise-take-homeTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aob.currency-converter-uikitTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cowrywise-take-home.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/cowrywise-take-home";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/currency-converter-uikit.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/currency-converter-uikit";
 			};
 			name = Release;
 		};
@@ -639,6 +639,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -699,6 +701,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -757,8 +761,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3G33A99C47;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "cowrywise-take-home/Info.plist";
+				INFOPLIST_FILE = "currency-converter-uikit/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -769,7 +774,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.aob.cowrywise-take-home";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aob.currency-converter-uikit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -785,8 +790,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3G33A99C47;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "cowrywise-take-home/Info.plist";
+				INFOPLIST_FILE = "currency-converter-uikit/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -797,7 +803,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.aob.cowrywise-take-home";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aob.currency-converter-uikit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -808,7 +814,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7E53843A2A677F450003C435 /* Build configuration list for PBXNativeTarget "cowrywise-take-homeTests" */ = {
+		7E53843A2A677F450003C435 /* Build configuration list for PBXNativeTarget "currency-converter-uikitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7E5384382A677F450003C435 /* Debug */,
@@ -817,7 +823,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7EC114E22A64631F00F31DB6 /* Build configuration list for PBXProject "cowrywise-take-home" */ = {
+		7EC114E22A64631F00F31DB6 /* Build configuration list for PBXProject "currency-converter-uikit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7EC114F92A64631F00F31DB6 /* Debug */,
@@ -826,7 +832,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7EC114FB2A64631F00F31DB6 /* Build configuration list for PBXNativeTarget "cowrywise-take-home" */ = {
+		7EC114FB2A64631F00F31DB6 /* Build configuration list for PBXNativeTarget "currency-converter-uikit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7EC114FC2A64631F00F31DB6 /* Debug */,

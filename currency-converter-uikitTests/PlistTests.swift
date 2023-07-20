@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import cowrywise_take_home
+@testable import currency_converter_uikit
 
 final class PlistTests: XCTestCase {
     
